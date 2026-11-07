@@ -1,0 +1,33 @@
+{
+  "name": "DayPulse — ตารางงานรายวัน & แจ้งเตือนส่งงาน",
+  "short_name": "DayPulse",
+  "description": "จัดการ To-Do List งานที่ต้องทำระหว่างวัน และแจ้งเตือนงานที่ต้องส่ง ซิงค์ข้าม PC, iOS และ Android",
+  "lang": "th",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FFFBF7",
+  "theme_color": "#FF5A36",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-192.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

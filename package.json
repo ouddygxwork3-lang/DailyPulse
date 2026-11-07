@@ -1,0 +1,45 @@
+{
+  "name": "daypulse-pwa",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "DayPulse — All-in-One Cross-Platform Daily Task, Deliverable & Smart Notification PWA for PC, iOS, and Android",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n SERVER,CLIENT -c cyan,magenta \"tsx watch server/index.ts\" \"vite\"",
+    "dev:server": "tsx watch server/index.ts",
+    "dev:client": "vite",
+    "build": "tsc --noEmit && vite build",
+    "start": " cross-env NODE_ENV=production tsx server/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "express": "^5.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "web-push": "^3.6.7",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@types/web-push": "^3.6.4",
+    "@vitejs/plugin-react": "^4.4.1",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "supertest": "^7.1.0",
+    "@types/supertest": "^6.0.3",
+    "tailwindcss": "^4.1.4",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.2",
+    "vitest": "^3.1.1"
+  }
+}
