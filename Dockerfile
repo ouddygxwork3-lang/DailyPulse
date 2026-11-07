@@ -1,18 +1,23 @@
-FROM node:22-bookworm-slim
+FROM node:24-bookworm-slim
 
 WORKDIR /app
 
-COPY package.json package-lock.json* ./
+COPY package.json ./
 RUN npm install
 
-COPY . .
-RUN npm run build
+COPY tsconfig.json vite.config.ts index.html ./
+COPY public ./public
+COPY src ./src
+COPY server ./server
+COPY tests ./tests
+
+RUN npm run build && mkdir -p /app/data
 
 ENV NODE_ENV=production
 ENV PORT=3000
+ENV TZ=Asia/Bangkok
 ENV DB_PATH=/app/data/daypulse.db
 
-VOLUME ["/app/data"]
 EXPOSE 3000
 
 CMD ["npx", "tsx", "server/index.ts"]
